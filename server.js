@@ -8,6 +8,7 @@ app.use(cors({
     origin: '*'
 }));
 app.use(express.json());
+mongoose.set('strictQuery', true);
 
 mongoose.connect('mongodb+srv://login:login@cluster0.xa0jcmi.mongodb.net/?retryWrites=true&w=majority').then(console.log("DB is connected"));
 
